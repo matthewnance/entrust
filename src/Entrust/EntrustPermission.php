@@ -13,7 +13,10 @@ use Zizaco\Entrust\Traits\EntrustPermissionTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Config;
 
-class EntrustPermission extends Model implements EntrustPermissionInterface
+// MongoDb Driver
+use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
+
+class EntrustPermission extends Eloquent implements EntrustPermissionInterface
 {
     use EntrustPermissionTrait;
 

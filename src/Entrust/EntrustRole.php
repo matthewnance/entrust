@@ -13,7 +13,10 @@ use Zizaco\Entrust\Traits\EntrustRoleTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Config;
 
-class EntrustRole extends Model implements EntrustRoleInterface
+// MongoDb Driver
+use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
+
+class EntrustRole extends Eloquent implements EntrustRoleInterface
 {
     use EntrustRoleTrait;
 
